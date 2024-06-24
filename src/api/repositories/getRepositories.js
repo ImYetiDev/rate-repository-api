@@ -21,6 +21,7 @@ const getRepositoryPayload = (
   description: get(githubRepository, 'description') || null,
   language: get(githubRepository, 'language') || null,
   ownerAvatarUrl: get(githubRepository, 'owner.avatar_url') || null,
+  voteCount: get(repository, 'voteCount') || 0,
 });
 
 const getRepositories = async ctx => {
